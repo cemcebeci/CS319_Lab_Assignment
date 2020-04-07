@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -12,5 +11,27 @@ class Main
         ArrayOrganizer org = new ArrayOrganizer();
 
         System.out.println( org.concatAndSort(a, b, c));
+        System.out.println( "------------------------------------");
+
+
+
+        Player tom = new Player( "Tom");
+        Player john = new Player( "John");
+        Player james = new Player( "James");
+        Player henry = new Player( "Henry");
+
+        Die die = new Die();
+
+        for(int i = 0; i < 5; i++) {
+            tom.addScore(die.rollDie());
+            john.addScore(die.rollDie());
+            james.addScore(die.rollDie());
+            henry.addScore(die.rollDie());
+        }
+
+        System.out.println(tom.toString());
+        System.out.println(john.toString());
+        System.out.println(james.toString());
+        System.out.println(henry.toString());
     }
 }
